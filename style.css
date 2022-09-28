@@ -17,6 +17,9 @@
   --btn-padding: 0.6rem 2rem;
   --search-padding: 0.6rem 1rem;
   --card-padding: 1rem;
+
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
 }
 
 *,
@@ -66,7 +69,7 @@ img {
   opacity: 0.8s;
 }
 .btn-primary {
-  background: var(--color-primary);
+  background-color: var(--color-primary);
   color: white;
 }
 .text-bold {
@@ -112,4 +115,34 @@ nav .create {
   display: flex;
   align-items: center;
   gap: 2rem;
+}
+
+/* Main */
+
+main {
+  position: relative;
+  top: 5.4rem;
+}
+main .container {
+  display: grid;
+  grid-template-columns: 18vw auto 20vw;
+  column-gap: 2rem;
+  position: relative;
+}
+
+/* Grid Left */
+
+main .container .grid-left {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-left);
+}
+main .container .grid-left .profile {
+  padding: var(--card-padding);
+  background-color: var(--color-white);
+  border-radius: var(--card-border-radius);
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  width: 100%;
 }
